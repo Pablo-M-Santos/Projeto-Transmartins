@@ -19,7 +19,7 @@
     <!-- Home -->
     <a
       href="#home"
-      class="nav-link"
+      class="nav-link font-weight-regular"
       @click.prevent="scroll('home')"
     >
       Home
@@ -28,7 +28,7 @@
     <!-- Sobre -->
     <a
       href="#sobre"
-      class="nav-link"
+      class="nav-link font-weight-regular"
       @click.prevent="scroll('sobre')"
     >
       Sobre
@@ -37,7 +37,7 @@
     <!-- Serviços -->
     <a
       href="#servicos"
-      class="nav-link"
+      class="nav-link font-weight-regular"
       @click.prevent="scroll('servicos')"
     >
       Serviços
@@ -46,7 +46,7 @@
     <!-- Estoque -->
     <a
       href="#estoque"
-      class="nav-link"
+      class="nav-link font-weight-regular"
       @click.prevent="scroll('estoque')"
     >
       Estoque
@@ -55,7 +55,7 @@
     <!-- Contato -->
     <a
       href="#contato"
-      class="nav-link"
+      class="nav-link font-weight-regular"
       @click.prevent="scroll('contato')"
     >
       Contato
@@ -64,7 +64,7 @@
     <!-- Portal do Cliente -->
     <v-btn
       text
-      class="nav-link-button"
+      class="nav-link-button font-weight-regular"
       @click="scroll('cliente')"
     >
       Portal do Cliente
