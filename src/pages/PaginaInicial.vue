@@ -34,8 +34,49 @@
         </v-col>
       </v-row>
     </v-container>
-
     <v-container id="sobre">
+      <div
+        class="text-center titulo-sobre font-weight-medium mt-2 mb-5"
+      >
+        SOBRE
+      </div>
+      <div
+        class="text-center subtitulo-sobre font-weight-regular mb-5"
+        style="color: #4D4D4D"
+      >
+        A Transmartins foi fundada pelo Sr. Sávio Pereira Martins em 02 de fevereiro de 1953 e mais tarde teria como sócio seu cunhado José Antônio Cruz. Empresa criada <br> para oferecer prestação de serviços em transporte de carga industrial (M.R.O). Com mais de sete décadas no mercado e muita determinação a Transmartins continua <br> prestando serviços de qualidade, com as mais diversas tecnologias e uma equipe de profissionais qualificados para controlar todo o processo logístico, buscando <br> sempre a evolução.
+      </div>
+      <div
+        class="text-center subtitulo-sobre font-weight-regular mb-10"
+        style="color: #4D4D4D"
+      >
+        Entregar serviços de transporte rodoviário de cargas, com segurança e melhoria contínua dos processos, desenvolvendo <br> ações para o meio ambiente e sociedade e, gerando valor aos clientes, colaboradores, agregados e sócios. <br> Ser uma empresa que cumpre o acordado com os clientes, de forma segura e eficiente até 2024.
+      </div>
+      <v-carousel
+        height="400"
+        show-arrows="hover"
+        cycle
+        hide-delimiter-background
+      >
+        <v-carousel-item
+          v-for="(slide, i) in slides"
+          :key="i"
+        >
+          <v-sheet
+            :color="colors[i]"
+            height="100%"
+          >
+            <div class="d-flex fill-height justify-center align-center">
+              <div class="text-h2">
+                {{ slide }} Slide
+              </div>
+            </div>
+          </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
+    </v-container>
+
+    <v-container id="servicos">
       <div
         class="text-center titulo-sobre font-weight-medium mt-2"
       >
@@ -362,74 +403,109 @@
           class="d-flex justify-left align-left"
         >
           <div>
-            <v-row class="d-flex align-center" no-gutters>
+            <v-row
+              class="d-flex align-center"
+              no-gutters
+            >
               <v-col
                 cols="auto"
                 class="text-left"
               >
-                <h3 class="numero-banner" >5.628</h3>
+                <h3 class="numero-banner">
+                  5.628
+                </h3>
               </v-col>
               <v-col
                 cols="auto"
                 class="text-left"
               >
-                <h4 class="texto-banner">clientes <br> atendidos</h4>
-              </v-col>
-            </v-row>
-            <v-row class="d-flex align-center" no-gutters>
-              <v-col
-                cols="auto"
-                class="text-left"
-              >
-                <h3 class="numero-banner" >4,07Bi</h3>
-              </v-col>
-              <v-col
-                cols="auto"
-                class="text-left"
-              >
-                <h4 class="texto-banner">bilhões em valor de <br> mercadorias transportadas</h4>
+                <h4 class="texto-banner">
+                  clientes <br> atendidos
+                </h4>
               </v-col>
             </v-row>
-            <v-row class="d-flex align-center" no-gutters>
+            <v-row
+              class="d-flex align-center"
+              no-gutters
+            >
               <v-col
                 cols="auto"
                 class="text-left"
               >
-                <h3 class="numero-banner" >8,3M</h3>
+                <h3 class="numero-banner">
+                  4,07Bi
+                </h3>
               </v-col>
               <v-col
                 cols="auto"
                 class="text-left"
               >
-                <h4 class="texto-banner">milhões de quilômetros percorridos, que são<br> equivalentes a 199 viagens de volta ao mundo</h4>
-              </v-col>
-            </v-row>
-            <v-row class="d-flex align-center" no-gutters>
-              <v-col
-                cols="auto"
-                class="text-left"
-              >
-                <h3 class="numero-banner" >217</h3>
-              </v-col>
-              <v-col
-                cols="auto"
-                class="text-left"
-              >
-                <h4 class="texto-banner">Mil toneladas de<br> cargas transportadas</h4>
+                <h4 class="texto-banner">
+                  bilhões em valor de <br> mercadorias transportadas
+                </h4>
               </v-col>
             </v-row>
-            <v-row class="d-flex align-center" no-gutters>
+            <v-row
+              class="d-flex align-center"
+              no-gutters
+            >
               <v-col
                 cols="auto"
                 class="text-left"
               >
-                <h3 class="numero-banner" >39.067</h3>
+                <h3 class="numero-banner">
+                  8,3M
+                </h3>
               </v-col>
               <v-col
                 cols="auto"
                 class="text-left"
               >
-                <h4 class="texto-banner">viagens<br> realizadas</h4>
+                <h4 class="texto-banner">
+                  milhões de quilômetros percorridos, que são<br> equivalentes a 199 viagens de volta ao mundo
+                </h4>
+              </v-col>
+            </v-row>
+            <v-row
+              class="d-flex align-center"
+              no-gutters
+            >
+              <v-col
+                cols="auto"
+                class="text-left"
+              >
+                <h3 class="numero-banner">
+                  217
+                </h3>
+              </v-col>
+              <v-col
+                cols="auto"
+                class="text-left"
+              >
+                <h4 class="texto-banner">
+                  Mil toneladas de<br> cargas transportadas
+                </h4>
+              </v-col>
+            </v-row>
+            <v-row
+              class="d-flex align-center"
+              no-gutters
+            >
+              <v-col
+                cols="auto"
+                class="text-left"
+              >
+                <h3 class="numero-banner">
+                  39.067
+                </h3>
+              </v-col>
+              <v-col
+                cols="auto"
+                class="text-left"
+              >
+                <h4 class="texto-banner">
+                  viagens<br> realizadas
+                </h4>
               </v-col>
             </v-row>
           </div>
@@ -447,6 +523,24 @@ export default {
   components: {
     NavBar,
   },
+  data () {
+      return {
+        colors: [
+          'indigo',
+          'warning',
+          'pink darken-2',
+          'red lighten-1',
+          'deep-purple accent-4',
+        ],
+        slides: [
+          'First',
+          'Second',
+          'Third',
+          'Fourth',
+          'Fifth',
+        ],
+      }
+    },
 };
 </script>
 
@@ -539,5 +633,9 @@ export default {
 .texto-banner {
   font-size: 13px;
 
+}
+
+.subtitulo-sobre{
+  font-size: 15px;
 }
 </style>
