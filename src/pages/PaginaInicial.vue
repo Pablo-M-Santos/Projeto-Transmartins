@@ -57,23 +57,51 @@
         show-arrows="hover"
         cycle
         hide-delimiter-background
+        hide-delimiters
       >
         <v-carousel-item
-          v-for="(slide, i) in slides"
+          v-for="(image, i) in slides"
           :key="i"
         >
-          <v-sheet
-            :color="colors[i]"
+          <v-img
+            :src="image"
             height="100%"
-          >
-            <div class="d-flex fill-height justify-center align-center">
-              <div class="text-h2">
-                {{ slide }} Slide
-              </div>
-            </div>
-          </v-sheet>
+            :contain="true"
+          />
         </v-carousel-item>
       </v-carousel>
+      <div
+        class="text-center titulo-sobre font-weight-medium mt-2 mb-5"
+      >
+        Unidades
+      </div>
+      <v-row dense>
+        <v-card
+          class="mx-auto"
+          width="400"
+        >
+          <v-card-title
+            class="text-white d-flex justify-center"
+            style="background-color: #05032f;"
+          >
+            <h5 class="text-center m-0 font-weight-regular">
+              Belo Horizonte - MG
+            </h5>
+          </v-card-title>
+
+          <v-card-text class="bg-surface-light pt-4">
+            <div class="d-flex align-center">
+              <v-icon
+                color="primary"
+                class="mr-2"
+              >
+                pin_drop
+              </v-icon>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-row>
     </v-container>
 
     <v-container id="servicos">
@@ -523,24 +551,23 @@ export default {
   components: {
     NavBar,
   },
-  data () {
-      return {
-        colors: [
-          'indigo',
-          'warning',
-          'pink darken-2',
-          'red lighten-1',
-          'deep-purple accent-4',
-        ],
-        slides: [
-          'First',
-          'Second',
-          'Third',
-          'Fourth',
-          'Fifth',
-        ],
-      }
-    },
+  data() {
+    return {
+      slides: [
+        new URL('@/assets/Frame 1.png', import.meta.url).href,
+        new URL('@/assets/Frame 2.png', import.meta.url).href,
+        new URL('@/assets/Frame 3.png', import.meta.url).href,
+        new URL('@/assets/Frame 4.png', import.meta.url).href,
+        new URL('@/assets/Frame 5.png', import.meta.url).href,
+        new URL('@/assets/Frame 6.png', import.meta.url).href,
+        new URL('@/assets/Frame 7.png', import.meta.url).href,
+        new URL('@/assets/Frame 8.png', import.meta.url).href,
+        new URL('@/assets/Frame 9.png', import.meta.url).href,
+        new URL('@/assets/Frame 10.png', import.meta.url).href,
+
+      ],
+    };
+  },
 };
 </script>
 
