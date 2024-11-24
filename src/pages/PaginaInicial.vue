@@ -75,32 +75,72 @@
       >
         Unidades
       </div>
-      <v-row dense>
-        <v-card
-          class="mx-auto"
-          width="400"
+      <v-row>
+        <v-col
+          cols="12"
+          md="5"
         >
-          <v-card-title
-            class="text-white d-flex justify-center"
-            style="background-color: #05032f;"
+          <v-card
+            class="mx-auto"
+            width="400"
           >
-            <h5 class="text-center m-0 font-weight-regular">
-              Belo Horizonte - MG
-            </h5>
-          </v-card-title>
+            <v-card-title
+              class="text-white d-flex justify-center"
+              style="background-color: #05032f;"
+            >
+              <h5 class="text-center m-0 font-weight-regular">
+                Belo Horizonte - MG
+              </h5>
+            </v-card-title>
 
-          <v-card-text class="bg-surface-light pt-4">
-            <div class="d-flex align-center">
-              <v-icon
-                color="primary"
-                class="mr-2"
-              >
-                pin_drop
-              </v-icon>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-            </div>
-          </v-card-text>
-        </v-card>
+            <v-card-text class="bg-surface-light pt-4">
+              <div class="d-flex align-left ">
+                <v-icon
+                  style="color: #E9500E;"
+                  class="mr-2"
+                >
+                  mdi-map-marker-outline
+                </v-icon>
+                <div><span class="font-weight-bold">End:</span> Rua Romualdo Cançado Netto, 198</div>
+              </div>
+              <div class="pl-5 ml-2">
+                <span class="font-weight-bold">Bairro:</span> Califórnia
+              </div>
+              <div class="pl-5 ml-2 mb-2">
+                <span class="font-weight-bold">CEP:</span> 30.855-420
+              </div>
+
+              <div class="d-flex align-center">
+                <v-icon
+                  style="color: #E9500E;"
+                  class="mr-2"
+                >
+                  mdi-phone-outline
+                </v-icon>
+                <div>
+                  <span class="font-weight-bold">Tel:</span> (31) 3479-4600
+                </div>
+              </div>
+              <div class="pl-5 ml-2 mb-2">
+                <span class="font-weight-bold">E-mail:</span> comercialetm@transmartins.com.br
+              </div>
+              <div class="d-flex align-center">
+                <v-icon
+                  style="color: #E9500E;"
+                  class="mr-2"
+                >
+                  mdi-office-building
+                </v-icon>
+                <div>
+                  <span class="font-weight-bold">CNPJ :</span> 17.191.172/0001-92
+                </div>
+              </div>
+              <div class="pl-5 ml-2 mb-2">
+                <span class="font-weight-bold">I.EST:</span> 062.609135.0047
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-col>
       </v-row>
     </v-container>
 
