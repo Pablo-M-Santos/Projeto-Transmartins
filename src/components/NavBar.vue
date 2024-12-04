@@ -11,7 +11,7 @@
       <v-img
         alt="Logo Transmartins"
         :width="210"
-        src="@/assets/logo.png"
+        src="@/assets/Logo.png"
       />
     </a>
     <v-spacer />
