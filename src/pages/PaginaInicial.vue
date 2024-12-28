@@ -1,6 +1,9 @@
 <template>
   <v-app style="background-color: #f8f9fa;">
+    <!-- Nav Bar -->
     <NavBar />
+
+    <!-- Home -->
     <v-container
       fluid
       fill-height
@@ -34,9 +37,14 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container id="sobre">
+
+    <!-- Sobre -->
+    <v-container
+      id="sobre"
+      class="mt-9"
+    >
       <div
-        class="text-center titulo-sobre font-weight-medium mt-2 mb-5"
+        class="text-center titulo-sobre text-h4 font-weight-medium mt-2 mb-5"
       >
         SOBRE
       </div>
@@ -52,12 +60,13 @@
       >
         Entregar serviços de transporte rodoviário de cargas, com segurança e melhoria contínua dos processos, desenvolvendo <br> ações para o meio ambiente e sociedade e, gerando valor aos clientes, colaboradores, agregados e sócios. <br> Ser uma empresa que cumpre o acordado com os clientes, de forma segura e eficiente até 2024.
       </div>
+
+      <!-- carrosel -->
       <v-carousel
         height="400"
         show-arrows="hover"
         cycle
         hide-delimiter-background
-        hide-delimiters
       >
         <v-carousel-item
           v-for="(image, i) in slides"
@@ -70,83 +79,79 @@
           />
         </v-carousel-item>
       </v-carousel>
-      <div
-        class="text-center titulo-sobre font-weight-medium mt-2 mb-5"
-      >
+    </v-container>
+
+    <!-- Unidades -->
+    <v-container
+      id="unidades"
+      class="mt-16 mb-16"
+    >
+      <div class="text-center titulo-sobre text-h4 font-weight-medium mt-10 mb-10">
         Unidades
       </div>
-      <v-row>
+      <v-row
+        class="justify-center"
+      >
         <v-col
+          v-for="(unidade, index) in unidades"
+          :key="index"
           cols="12"
-          md="5"
+          sm="6"
+          md="4"
         >
           <v-card
-            class="mx-auto"
-            width="400"
+            class="mx-auto d-flex flex-column"
+            max-width="400"
+            height="260px"
           >
             <v-card-title
               class="text-white d-flex justify-center"
               style="background-color: #05032f;"
             >
               <h5 class="text-center m-0 font-weight-regular">
-                Belo Horizonte - MG
+                {{ unidade.cidade }}
               </h5>
             </v-card-title>
-
             <v-card-text class="bg-surface-light pt-4">
-              <div class="d-flex align-left ">
+              <div class="d-flex align-left">
                 <v-icon
                   style="color: #E9500E;"
                   class="mr-2"
                 >
                   mdi-map-marker-outline
                 </v-icon>
-                <div><span class="font-weight-bold">End:</span> Rua Romualdo Cançado Netto, 198</div>
+                <div>
+                  <span class="font-weight-bold">End:</span> {{ unidade.endereco }}
+                </div>
               </div>
               <div class="pl-5 ml-2">
-                <span class="font-weight-bold">Bairro:</span> Califórnia
+                <span class="font-weight-bold">Bairro:</span> {{ unidade.bairro }}
               </div>
               <div class="pl-5 ml-2 mb-2">
-                <span class="font-weight-bold">CEP:</span> 30.855-420
-              </div>
-
-              <div class="d-flex align-center">
-                <v-icon
-                  style="color: #E9500E;"
-                  class="mr-2"
-                >
-                  mdi-phone-outline
-                </v-icon>
-                <div>
-                  <span class="font-weight-bold">Tel:</span> (31) 3479-4600
-                </div>
+                <span class="font-weight-bold">CEP:</span> {{ unidade.cep }}
               </div>
               <div class="pl-5 ml-2 mb-2">
-                <span class="font-weight-bold">E-mail:</span> comercialetm@transmartins.com.br
-              </div>
-              <div class="d-flex align-center">
-                <v-icon
-                  style="color: #E9500E;"
-                  class="mr-2"
-                >
-                  mdi-office-building
-                </v-icon>
-                <div>
-                  <span class="font-weight-bold">CNPJ :</span> 17.191.172/0001-92
-                </div>
+                <span class="font-weight-bold">Tel:</span> {{ unidade.telefone }}
               </div>
               <div class="pl-5 ml-2 mb-2">
-                <span class="font-weight-bold">I.EST:</span> 062.609135.0047
+                <span class="font-weight-bold">E-mail:</span> {{ unidade.email }}
+              </div>
+              <div class="pl-5 ml-2 mb-2">
+                <span class="font-weight-bold">CNPJ:</span> {{ unidade.cnpj }}
+              </div>
+              <div class="pl-5 ml-2 mb-2">
+                <span class="font-weight-bold">I.EST:</span> {{ unidade.iest }}
               </div>
             </v-card-text>
           </v-card>
         </v-col>
       </v-row>
-    </v-container>|
+    </v-container>
 
+    <!-- Serviços -->
     <v-container id="servicos">
       <div
-        class="text-center titulo-sobre font-weight-medium mt-2"
+        class="text-center titulo-sobre text-h4 font-weight-medium mt-2"
       >
         TODOS OS SERVIÇOS
       </div>
@@ -233,11 +238,14 @@
           </v-card>
         </v-col>
       </v-row>
+
+      <!-- Cards -->
       <div
-        class="text-center titulo-sobre-2 font-weight-bold mt-12"
+        class="text-center titulo-sobre-2 text-h5 font-weight-bold mt-12"
       >
         POR QUE ESCOLHER A TRANSMARTINS?
       </div>
+
       <!-- Linha 1 -->
       <v-row class="mt-8">
         <v-col
@@ -438,6 +446,154 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <!-- Objetos da Qualidade -->
+    <v-container
+      id="objetivos"
+    >
+      <div
+        class="text-center titulo-sobre-2 font-weight-bold mt-12"
+      >
+        OBJETIVOS DA QUALIDADE
+      </div>
+      <v-row
+        class="mt-10"
+      >
+        <v-col
+          cols="12"
+          sm="6"
+          md="6"
+          lg="6"
+        >
+          <v-card
+            class="pt-4"
+            elevation="5"
+          >
+            <v-row
+              align="center"
+              no-gutters
+            >
+              <v-col
+                class="d-flex"
+                cols="auto"
+              >
+                <v-img
+                  src="@/assets/database.png"
+                  class="ma-3  imagem-card-sobre"
+                  width="auto"
+                />
+              </v-col>
+              <v-col>
+                <div>
+                  Buscar equilíbrio financeiro viabilizando a utilização de recursos para o desenvolvimento da nossa força de trabalho e sustentabilidade do negócio.
+                </div>
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="6"
+          md="6"
+          lg="6"
+        >
+          <v-card
+            class="pt-4"
+            elevation="5"
+          >
+            <v-row
+              align="center"
+              no-gutters
+            >
+              <v-col
+                class="d-flex"
+                cols="auto"
+              >
+                <v-img
+                  src="@/assets/planilha.png"
+                  class="ma-3  imagem-card-sobre"
+                  width="auto"
+                />
+              </v-col>
+              <v-col>
+                <div>
+                  Buscar eficiência operacional em nossos processos, mantendo o compromisso com a segurança.
+                </div>
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="6"
+          md="6"
+          lg="6"
+        >
+          <v-card
+            class="pt-4"
+            elevation="5"
+          >
+            <v-row
+              align="center"
+              no-gutters
+            >
+              <v-col
+                class="d-flex"
+                cols="auto"
+              >
+                <v-img
+                  src="@/assets/cartao.png"
+                  class="ma-3  imagem-card-sobre"
+                  width="auto"
+                />
+              </v-col>
+              <v-col>
+                <div>
+                  Fazer do nosso cliente um parceiro, buscando sua fidelização atendendo os compromissos assumidos.
+                </div>
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+
+        <v-col
+          cols="12"
+          sm="6"
+          md="6"
+          lg="6"
+        >
+          <v-card
+            class="pt-4"
+            elevation="5"
+          >
+            <v-row
+              align="center"
+              no-gutters
+            >
+              <v-col
+                class="d-flex"
+                cols="auto"
+              >
+                <v-img
+                  src="@/assets/luz.png"
+                  class="ma-3 imagem-card-sobre"
+                  width="auto"
+                />
+              </v-col>
+              <v-col>
+                <div>
+                  Contribuir com a preservação do Meio Ambiente e com a responsabilidade social junto à comunidade.
+                </div>
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- Decadas de Experiencia -->
     <div
       fluid
       fill-height
@@ -583,32 +739,94 @@
   </v-app>
 </template>
 
-<script>
+<script setup>
 import NavBar from '@/components/NavBar.vue';
 
-export default {
-  name: "PaginaInicial",
-  components: {
-    NavBar,
-  },
-  data() {
-    return {
-      slides: [
-        new URL('@/assets/Frame 1.png', import.meta.url).href,
-        new URL('@/assets/Frame 2.png', import.meta.url).href,
-        new URL('@/assets/Frame 3.png', import.meta.url).href,
-        new URL('@/assets/Frame 4.png', import.meta.url).href,
-        new URL('@/assets/Frame 5.png', import.meta.url).href,
-        new URL('@/assets/Frame 6.png', import.meta.url).href,
-        new URL('@/assets/Frame 7.png', import.meta.url).href,
-        new URL('@/assets/Frame 8.png', import.meta.url).href,
-        new URL('@/assets/Frame 9.png', import.meta.url).href,
-        new URL('@/assets/Frame 10.png', import.meta.url).href,
+const slides = [
+  new URL('@/assets/Frame 1.png', import.meta.url).href,
+  new URL('@/assets/Frame 2.png', import.meta.url).href,
+  new URL('@/assets/Frame 3.png', import.meta.url).href,
+  new URL('@/assets/Frame 4.png', import.meta.url).href,
+  new URL('@/assets/Frame 5.png', import.meta.url).href,
+  new URL('@/assets/Frame 6.png', import.meta.url).href,
+  new URL('@/assets/Frame 7.png', import.meta.url).href,
+  new URL('@/assets/Frame 8.png', import.meta.url).href,
+  new URL('@/assets/Frame 9.png', import.meta.url).href,
+  new URL('@/assets/Frame 10.png', import.meta.url).href,
+];
 
-      ],
-    };
+const unidades = [
+  {
+    cidade: "Belo Horizonte - MG",
+    endereco: "Rua Romualdo Cançado Netto, 198",
+    bairro: "Califórnia",
+    cep: "30.855-420",
+    telefone: "(31) 3479-4600",
+    email: "comercialetm@transmartins.com.br",
+    cnpj: "17.191.172/0001-92",
+    iest: "062.609135.0047",
   },
-};
+  {
+    cidade: "Coronel Fabriciano - MG",
+    endereco: "Av. Presidente Tancredo de Almeida Neves, 431",
+    bairro: "Todos os Santos",
+    cep: "35.170-054",
+    telefone: "(31) 3865-1050",
+    email: "comercialcrf@transmartins.com.br",
+    cnpj: "17.191.172/0002-73",
+    iest: "194.609135.0219",
+  },
+  {
+    cidade: "Duque de Caxias - RJ",
+    endereco: "Rodovia Washington Luiz, 2.569",
+    bairro: "Terminal de Cargas do Rio - Vila São Luiz",
+    cep: "25.080-000",
+    telefone: "(21) 3266-4555",
+    email: "comercialrio@transmartins.com.br",
+    cnpj: "17.191.172/0005-16",
+    iest: "84.089.109",
+  },
+  {
+    cidade: "João Monlevade - MG",
+    endereco: "Av. Armando Fajardo, 2109",
+    bairro: "Loanda",
+    cep: "35.931-000",
+    telefone: "(31) 3851-1150",
+    email: "comercialjmn@transmartins.com.br",
+    cnpj: "17.191.172/0003-54",
+    iest: "362.609.135.0359",
+  },
+  {
+    cidade: "São Paulo - SP",
+    endereco: "Avenida Bandeirantes Sul, 771",
+    bairro: "Vila Maria",
+    cep: "02165-000",
+    telefone: "(11) 2588-9200",
+    email: "comercialspa@transmartins.com.br",
+    cnpj: "17.191.172/0004-35",
+    iest: "141.756.110.116",
+  },
+  {
+    cidade: "Serra - ES",
+    endereco: "Rua 3b, S/N",
+    bairro: "Civit II",
+    cep: "29.168-069",
+    telefone: "(27) 3138-8212",
+    email: "comercialserra@transmartins.com.br",
+    cnpj: "17.191.172/0010-83",
+    iest: "08.270.776-6",
+  },
+  {
+    cidade: "Sumaré - SP",
+    endereco: "Rua Joaquim Ignácio Valente, 291",
+    bairro: "Jardim Bela Vista",
+    cep: "13175-900",
+    telefone: "(19) 2038-2400",
+    email: "comercialsum@transmartins.com.br",
+    cnpj: "17.191.172/0014-07",
+    iest: "671.655.770.110",
+  },
+];
 </script>
 
 <style scoped>
@@ -641,6 +859,7 @@ export default {
 .titulo {
   color: #E9500E;
 }
+
 
 .text {
   font-size: 75px;

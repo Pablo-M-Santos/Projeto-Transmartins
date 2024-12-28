@@ -34,6 +34,15 @@
       Sobre
     </a>
 
+    <!-- Unidades -->
+    <a
+      href="#unidades"
+      class="nav-link font-weight-regular"
+      @click.prevent="scroll('unidades')"
+    >
+      Unidades
+    </a>
+
     <!-- Serviços -->
     <a
       href="#servicos"
@@ -43,32 +52,14 @@
       Serviços
     </a>
 
-    <!-- Estoque -->
+    <!-- Objetivo -->
     <a
-      href="#estoque"
+      href="#objetivo"
       class="nav-link font-weight-regular"
-      @click.prevent="scroll('estoque')"
+      @click.prevent="scroll('objetivo')"
     >
-      Estoque
+      Objetivo
     </a>
-
-    <!-- Contato -->
-    <a
-      href="#contato"
-      class="nav-link font-weight-regular"
-      @click.prevent="scroll('contato')"
-    >
-      Contato
-    </a>
-
-    <!-- Portal do Cliente -->
-    <v-btn
-      text
-      class="nav-link-button font-weight-regular"
-      @click="scroll('cliente')"
-    >
-      Portal do Cliente
-    </v-btn>
   </v-app-bar>
 </template>
 
