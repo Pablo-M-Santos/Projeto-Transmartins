@@ -1,0 +1,136 @@
+<template>
+  <v-app>
+    <NavBar />
+    <v-container
+      fluid
+      fill-height
+      class="container-img"
+    >
+      <section class="module parallax parallax-1" />
+
+
+      <section class="module parallax ">
+        <h1 class="text-center titulo-sobre-2 text-h5 font-weight-bold mt-12">Explore todo a nossa Frota de Caminhões Volvo</h1>
+        <p class="text-center font-weight-regular mb-10 mr-14 ml-14">Com uma ampla variedade de opções de motorização e uma seleção ainda maior de modelos, existe um caminhão Volvo ideal para as necessidades do seu negócio. Descubra todas as soluções que oferecemos e encontre o caminhão perfeito para impulsionar sua operação.</p>
+        <v-row>
+          <v-col
+            cols="12"
+            md="4"
+          >
+            <v-card
+              class="mx-auto"
+              max-width="344"
+              elevation="5"
+              height="210"
+              style="padding: 30px 20px"
+            >
+              <v-img
+                src="@/assets/card-1.png"
+                class="mb-2 imagem-card-sobre"
+                width="auto"
+                contain
+                style="display: block; margin: 0 auto;"
+              />
+              <v-card-title class="text-center">
+                Segurança e <br>
+                pontualidade
+              </v-card-title>
+            </v-card>
+          </v-col>
+          <v-col
+            cols="12"
+            md="4"
+          >
+            <v-card
+              class="mx-auto"
+              max-width="344"
+              elevation="5"
+              height="210"
+              style="padding: 30px 20px"
+            >
+              <v-img
+                src="@/assets/card-2.png"
+                class="mb-2 imagem-card-sobre"
+                width="auto"
+                contain
+                style="display: block; margin: 0 auto;"
+              />
+              <v-card-title class="text-center">
+                Responsabilidade <br>
+                social
+              </v-card-title>
+            </v-card>
+          </v-col>
+          <v-col
+            cols="12"
+            md="4"
+          >
+            <v-card
+              class="mx-auto"
+              max-width="344"
+              elevation="5"
+              height="210"
+              style="padding: 30px 20px"
+            >
+              <v-img
+                src="@/assets/card-3.png"
+                class="mb-2 imagem-card-sobre"
+                width="auto"
+                contain
+                style="display: block; margin: 0 auto;"
+              />
+              <v-card-title class="text-center">
+                Qualidade no<br>
+                atendimento
+              </v-card-title>
+            </v-card>
+          </v-col>
+        </v-row>
+      </section>
+    </v-container>
+  </v-app>
+</template>
+
+<script setup>
+import NavBar from '@/components/NavBar.vue';
+
+</script>
+
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  color: #242424;
+  font-family: sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.container-img {
+  width: 100%;
+}
+
+section.module.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+
+section.module.parallax-1 {
+  background-image: url("/src/assets/ImgVolvoInicio.png");
+}
+
+
+</style>

@@ -20,18 +20,17 @@
     <a
       href="#home"
       class="nav-link font-weight-regular"
-      @click.prevent="scroll('home')"
+      @click.prevent="navigateToHome"
     >
       Home
     </a>
 
-    <!-- Sobre -->
+    <!-- Nossa Frota -->
     <a
-      href="#sobre"
       class="nav-link font-weight-regular"
-      @click.prevent="scroll('sobre')"
+      @click.prevent="navigateToFrota"
     >
-      Sobre
+      Nossa Frota
     </a>
 
     <!-- Unidades -->
@@ -70,6 +69,12 @@ export default {
     scroll(refName) {
       const element = document.getElementById(refName);
       element.scrollIntoView({behavior: "smooth"});
+    },
+    navigateToHome() {
+      this.$router.push('/');
+    },
+    navigateToFrota() {
+      this.$router.push('/frota');
     }
   }
 };

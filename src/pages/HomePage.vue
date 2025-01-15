@@ -63,9 +63,10 @@
 
       <!-- carrosel -->
       <v-carousel
-        height="400"
+        height="auto"
         show-arrows="hover"
         cycle
+        class="custom-carousel"
         hide-delimiter-background
       >
         <v-carousel-item
@@ -923,5 +924,11 @@ const unidades = [
 
 .subtitulo-sobre{
   font-size: 15px;
+}
+
+.custom-carousel {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 </style>
