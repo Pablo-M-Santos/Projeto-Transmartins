@@ -10,30 +10,53 @@
 
 
       <section class="module parallax ">
-        <h1 class="text-center titulo-sobre-2 text-h5 font-weight-bold mt-12">Explore todo a nossa Frota de Caminhões Volvo</h1>
-        <p class="text-center font-weight-regular mb-10 mr-14 ml-14">Com uma ampla variedade de opções de motorização e uma seleção ainda maior de modelos, existe um caminhão Volvo ideal para as necessidades do seu negócio. Descubra todas as soluções que oferecemos e encontre o caminhão perfeito para impulsionar sua operação.</p>
-        <v-row>
+        <h1 class="text-center text-h5 font-weight-bold mt-16 mb-8">
+          Explore todo a nossa Frota de Caminhões Volvo
+        </h1>
+        <p class="text-center font-weight-regular mb-10 mr-16 ml-16">
+          Com uma ampla variedade de opções de motorização e uma seleção ainda maior de modelos, existe um caminhão Volvo ideal para as necessidades do seu negócio. Descubra todas as soluções que oferecemos e encontre o caminhão perfeito para impulsionar sua operação.
+        </p>
+        <v-row
+          class="mb-16"
+        >
           <v-col
             cols="12"
             md="4"
           >
             <v-card
-              class="mx-auto"
-              max-width="344"
+              class="mx-auto no-border"
+              max-width="350"
               elevation="5"
-              height="210"
+              height="360"
               style="padding: 30px 20px"
             >
               <v-img
-                src="@/assets/card-1.png"
+                src="@/assets/VolvoFh.png"
                 class="mb-2 imagem-card-sobre"
                 width="auto"
                 contain
                 style="display: block; margin: 0 auto;"
               />
-              <v-card-title class="text-center">
-                Segurança e <br>
-                pontualidade
+              <v-card-actions class="d-flex justify-center">
+                <v-btn
+                  color="primary"
+                  text
+                  :to="{ name: 'CaminhaoDetalhes', params: { id: 1 } }"
+                >
+                  Volvo FH
+                  <v-icon
+                    class="ml-2"
+                    color="primary"
+                  >
+                    mdi-arrow-right
+                  </v-icon>
+                </v-btn>
+              </v-card-actions>
+              <v-card-title
+                class="text-center text-subtitle-2"
+                style="white-space: normal;"
+              >
+                Líder em longas distâncias, o Volvo FH proporciona ao motorista conforto, segurança e economia inigualáveis.
               </v-card-title>
             </v-card>
           </v-col>
@@ -42,22 +65,39 @@
             md="4"
           >
             <v-card
-              class="mx-auto"
-              max-width="344"
+              class="mx-auto no-border"
+              max-width="350"
               elevation="5"
-              height="210"
+              height="360"
               style="padding: 30px 20px"
             >
               <v-img
-                src="@/assets/card-2.png"
+                src="@/assets/VolvoFM.png"
                 class="mb-2 imagem-card-sobre"
                 width="auto"
                 contain
                 style="display: block; margin: 0 auto;"
               />
-              <v-card-title class="text-center">
-                Responsabilidade <br>
-                social
+              <v-card-actions class="d-flex justify-center">
+                <v-btn
+                  color="primary"
+                  text
+                  :to="{ name: 'CaminhaoDetalhes', params: { id: 2 } }"
+                >
+                  Volvo FM
+                  <v-icon
+                    class="ml-2"
+                    color="primary"
+                  >
+                    mdi-arrow-right
+                  </v-icon>
+                </v-btn>
+              </v-card-actions>
+              <v-card-title
+                class="text-center text-subtitle-2"
+                style="white-space: normal;"
+              >
+                Nosso caminhão mais versátil. Design surpreendente, manuseio fantástico e excelente economia operacional.
               </v-card-title>
             </v-card>
           </v-col>
@@ -66,22 +106,39 @@
             md="4"
           >
             <v-card
-              class="mx-auto"
-              max-width="344"
+              class="mx-auto no-border"
+              max-width="350"
               elevation="5"
-              height="210"
+              height="360"
               style="padding: 30px 20px"
             >
               <v-img
-                src="@/assets/card-3.png"
+                src="@/assets/VolvoFMX.png"
                 class="mb-2 imagem-card-sobre"
                 width="auto"
                 contain
                 style="display: block; margin: 0 auto;"
               />
-              <v-card-title class="text-center">
-                Qualidade no<br>
-                atendimento
+              <v-card-actions class="d-flex justify-center">
+                <v-btn
+                  color="primary"
+                  text
+                  :to="{ name: 'CaminhaoDetalhes', params: { id: 3 } }"
+                >
+                  Volvo FMX
+                  <v-icon
+                    class="ml-2"
+                    color="primary"
+                  >
+                    mdi-arrow-right
+                  </v-icon>
+                </v-btn>
+              </v-card-actions>
+              <v-card-title
+                class="text-center text-subtitle-2"
+                style="white-space: normal;"
+              >
+                O moderno caminhão de construção. Forte, resistente e repleto de recursos incríveis.
               </v-card-title>
             </v-card>
           </v-col>
@@ -131,6 +188,13 @@ section.module.parallax {
 section.module.parallax-1 {
   background-image: url("/src/assets/ImgVolvoInicio.png");
 }
+
+.no-border {
+  box-shadow: none !important;
+  transition: border 0.3s ease;
+}
+
+
 
 
 </style>
