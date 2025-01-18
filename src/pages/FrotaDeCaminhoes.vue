@@ -47,8 +47,9 @@
                   <v-icon
                     class="ml-2"
                     color="primary"
+                    style="font-size: 25px"
                   >
-                    mdi-arrow-right
+                    mdi-chevron-right
                   </v-icon>
                 </v-btn>
               </v-card-actions>
@@ -88,8 +89,9 @@
                   <v-icon
                     class="ml-2"
                     color="primary"
+                    style="font-size: 25px"
                   >
-                    mdi-arrow-right
+                    mdi-chevron-right
                   </v-icon>
                 </v-btn>
               </v-card-actions>
@@ -129,8 +131,9 @@
                   <v-icon
                     class="ml-2"
                     color="primary"
+                    style="font-size: 25px"
                   >
-                    mdi-arrow-right
+                    mdi-chevron-right
                   </v-icon>
                 </v-btn>
               </v-card-actions>
