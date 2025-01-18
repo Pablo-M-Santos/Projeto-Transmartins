@@ -31,7 +31,7 @@
               style="padding: 30px 20px"
             >
               <v-img
-                src="@/assets/VolvoFh.png"
+                src="@/assets/VolvoFH.png"
                 class="mb-2 imagem-card-sobre"
                 width="auto"
                 contain
