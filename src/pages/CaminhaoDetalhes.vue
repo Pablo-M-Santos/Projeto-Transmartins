@@ -72,9 +72,7 @@
         />
       </v-col>
     </v-row>
-    <v-row
-      class="pt-16 mt-16 ml-16 mr-16 pl-5 pr-5"
-    >
+    <v-row>
       <v-col cols="6">
         <h1 class="text-h4 font-weight-bold mr-10">
           {{ caminhao.conforto }}
@@ -94,6 +92,32 @@
       >
         Seu navegador não suporta o formato de vídeo.
       </video>
+    </v-row>
+    <v-row
+      justify="center"
+      dense
+    >
+      <v-col
+        class="mt-10"
+      >
+        <v-img
+          :src="caminhao.image"
+          class="mb-4"
+          style="margin: 0 auto;"
+          contain
+        />
+      </v-col>
+      <v-col
+        class="ml-16 mr-16 mt-10"
+      >
+        <h1 class="font-weight-bold text-h4 ml-10 text-left">
+          {{ caminhao.sobreTitulo }}
+        </h1>
+        <p
+          class="text-h6 text-left ml-10 mt-10 "
+          v-html="caminhao.sobretexto"
+        />
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -115,7 +139,9 @@ const caminhoes = [
     tituloPagina: 'Volvo FH 2025. A evolução do ícone das estradas.',
     subitulo: 'O Volvo FH é o icônico caminhão de longa distância, construído para ser confortável e seguro nos trechos mais desafiadores. Carregado com tecnologia para aumentar sua produtividade, enquanto economiza combustível, ele está pronto para ir além e fazer o que ninguém mais consegue.',
     conforto:'Explore as funcionalidades, o conforto e a segurança do Volvo FH',
-    sobreConforto:'Segurança é o valor fundamental da Volvo. Trabalhamos em diferentes áreas visando um futuro com zero acidentes.E a segurança realmente começa com o que podemos ver. Saber o que está acontecendo ao redor do caminhão é crucial para uma direção segura.Sistemas com radares, sensores e câmeras projetados para detectar e alertar motoristas sobre pedestres e ciclistas próximo ao caminhão, ótima visibilidade noturna ou com mal tempo, visibilidade ampliada e tecnologia aprimorada fazem com que o caminhão “veja” coisas que o motorista não vê.'
+    sobreConforto:'Segurança é o valor fundamental da Volvo. Trabalhamos em diferentes áreas visando um futuro com zero acidentes.E a segurança realmente começa com o que podemos ver. Saber o que está acontecendo ao redor do caminhão é crucial para uma direção segura.Sistemas com radares, sensores e câmeras projetados para detectar e alertar motoristas sobre pedestres e ciclistas próximo ao caminhão, ótima visibilidade noturna ou com mal tempo, visibilidade ampliada e tecnologia aprimorada fazem com que o caminhão “veja” coisas que o motorista não vê.',
+    sobreTitulo:'Mantenha-se na Faixa',
+    sobreTexto:'Leitor de faixa otimizado, com suporte de direção ativa contínuo. A Direção Dinâmica Volvo VDS com Auxílio à Manutenção na Faixa de Rodagem existe para facilitar o movimento constante na faixa de rodagem. Se o caminhão se desviar da faixa, o sistema foi concebido para alertar o motorista e prestar assistência à direção para guiar o caminhão em direção ao centro da faixa de rodagem.'
   },
   {
     id: 2,
