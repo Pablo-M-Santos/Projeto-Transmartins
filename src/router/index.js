@@ -3,9 +3,7 @@ import HomePage from '@/pages/HomePage.vue'
 import FrotaDeCaminhoes from '@/pages/FrotaDeCaminhoes.vue'
 import CaminhaoDetalhes from '@/pages/CaminhaoDetalhes.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+const routes = [
     {
       path: '/',
       name: 'home',
@@ -22,12 +20,18 @@ const router = createRouter({
       component: CaminhaoDetalhes,
       props: true,
     },
-  ]
-})
+  ];
 
-
-router.isReady().then(() => {
-  localStorage.removeItem('vuetify:dynamic-reload')
-})
+  const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
+});
 
 export default router
