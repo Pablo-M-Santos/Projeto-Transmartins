@@ -1,5 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
+  <NavBar />
   <v-container
     fluid
     fill-height
@@ -178,7 +179,7 @@
       image1: new URL('@/assets/FH_capa.png', import.meta.url).href,
       titulo2:
         '<strong>Aplicações:</strong> Serviços de transporte de longa distância e regional, aplicação em setores do agronegócio, transporte florestal e canavieiro, combustíveis e produtos químicos, e transporte de cargas pesadas.<br/><strong>Potência:</strong> 420–540 cv',
-      image2: new URL('@/assets/VolvoFh.png', import.meta.url).href,
+      image2: new URL('@/assets/volvo-fh1.png', import.meta.url).href,
       titulo3:
         'Explore as funcionalidades, o conforto e a segurança do Volvo FH',
       subTitulo2:
@@ -197,9 +198,26 @@
     {
       id: 2,
       marca: 'Volvo FM',
-      titulo2: 'Detalhes sobre o Volvo FM.',
-      image: new URL('@/assets/VolvoFM.png', import.meta.url).href,
+      titulo1: 'Volvo FM, versátil para rodar por tudo',
+      subTitulo1:'A versatilidade que você precisa para ir além. Agora, os serviços personalizados do Volvo FM vêm acompanhados de muita conectividade e conforto. Amplo espaço interno e ferramentas que garantem segurança e te deixam preparados para o dia a dia nas estradas. É produtividade que não tem fim. Não importa onde, ele estará lá do jeito que você precisar. Feito para se adaptar às suas necessidades.Versátil para rodar por tudo',
+      image1: new URL('@/assets/FM_capa.png', import.meta.url).href,
+      titulo2:
+        '<strong>Aplicações:</strong> Serviços de transporte regional, transporte de produtos químicos e petrolíferos, transporte de entregas, transporte de resíduos e reciclagem, transportes de serviços públicos<br/><strong>Potência:</strong> 380 cv',
+      image2: new URL('@/assets/volvo-fm1.png', import.meta.url).href,
+      titulo3:
+        'Uma cabine projetada sua produtividade e conforto',
+      subTitulo2:
+        'Versátil e conectado, o Volvo FM está sempre pronto para cumprir todos os trajetos e realizar todas as entregas. E para ir cada vez mais longe e entregar mais, sempre com segurança, conte com o Plano de Manutenção Ouro, que associa a inteligência do caminhão com a conectividade avançada para garantir as manutenções preventivas e evitar paradas não planejadas. ',
       video: new URL('@/assets/volvo-fm.mp4', import.meta.url).href,
+      image3: new URL('@/assets/Volvo-fm-sobre.png', import.meta.url).href,
+      titulo4: 'Economia de Combustível',
+      subTitulo3:
+        'O Volvo FM agora possui o consagrado motor D13K Euro 6, possui o sistema de injeção Common Rail Volvo e seus injetores de altíssima pressão e precisão e, associado a este sistema, a exclusiva tecnologia de combustão WAVE, que possibilita maiores pressões de funcionamento do motor, resultando em uma queima mais rápida, completa e eficiente do combustível. O turbocompressor e aumenta a eficiência no motor e permite gerar máximo torque em rotações ainda menores. O Volvo FM conta com a 7ª geração da renomada caixa de cambio I-Shift.',
+      imagem4: new URL('@/assets/Volvo-fm-sobre2.png', import.meta.url).href,
+      titulo5: 'Sistemas de suporte ao motorista',
+      subTitulo4:
+        'Se houver um certo risco de colisão à frente, o alerta de colisão com frenagem de emergência está disponível para alertá-lo e acionar os freios, se necessário. O suporte para evitar colisão lateral e o aviso de abertura da porta cobrem ambos os lados. Utilizam sensores de radar para reduzir o risco de colisões com veículos e outros usuários da estrada.',
+      imagem5: new URL('@/assets/Volvo-fm-sobre3.png', import.meta.url).href,
     },
     {
       id: 3,
