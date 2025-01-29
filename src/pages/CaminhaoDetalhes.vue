@@ -48,13 +48,17 @@
         class="responsive-image"
       >
     </div>
+    <div
+      ref="animationContainer"
+      class="truck-animation"
+    />
     <v-row
       justify="center"
       dense
       class="ml-16 mr-16 mt-16"
-      style="color: #53565a; background-color: black"
+      style="color: #53565a; background-color: #F7F7F7;"
     >
-      <v-col class="ml-16 mr-16">
+      <v-col class="ml-16 mr-16 mt-16">
         <h1 class="font-weight-bold text-h4 ml-10 text-left">
           {{ caminhao.marca }}
         </h1>
@@ -97,17 +101,11 @@
         class="mt-16 rounded-xl elevation-30"
         :src="caminhao.video"
         width="1400px"
-        style="display: block; margin: 0 auto; margin-bottom: 200px"
+        style="display: block; margin: 0 auto; margin-bottom: 100px"
       >
         Seu navegador não suporta o formato de vídeo.
       </video>
     </v-row>
-
-    <vue-lottie
-      :options="defaultOptions"
-      height="200px"
-      width="400px"
-    />
     <v-row
       justify="center"
       align="center"
@@ -135,10 +133,10 @@
       class="mt-16 pt-16"
     >
       <v-col class="r-16 mt-10">
-        <h1 class="font-weight-bold text-h4 ml-10 text-right">
+        <h1 class="font-weight-bold text-h4 mr-10 text-right">
           {{ caminhao.titulo5 }}
         </h1>
-        <p class="text-h6 text-right mt-10 ml-16 pl-16">
+        <p class="text-h6 text-right mt-10 mr-10 pl-16">
           {{ caminhao.subTitulo4 }}
         </p>
       </v-col>
@@ -161,19 +159,14 @@
 </template>
 
 <script setup>
-  import TruckAnimation from '@/assets/truck-animation.json'
   import { onMounted, ref } from 'vue'
   import { useRoute } from 'vue-router'
-  import 'vue3-lottie/dist/style.css'
+
 
   const route = useRoute()
   const caminhao = ref({})
 
-  const defaultOptions = ref({
-    animationData: TruckAnimation,
-    loop: true,
-    autoplay: true,
-  })
+
 
   const caminhoes = [
     {
@@ -217,10 +210,12 @@
     },
   ]
 
+
   onMounted(() => {
     const caminhaoId = Number(route.params.id)
     caminhao.value = caminhoes.find((c) => c.id === caminhaoId)
-  })
+
+  });
 </script>
 
 <style scoped>
@@ -247,4 +242,5 @@
     height: 100%;
     object-fit: cover;
   }
+
 </style>
