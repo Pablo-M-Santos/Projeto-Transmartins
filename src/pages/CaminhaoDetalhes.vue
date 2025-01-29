@@ -222,9 +222,26 @@
     {
       id: 3,
       marca: 'Volvo FMX',
-      titulo2: 'Detalhes sobre o Volvo FMX.',
-      image: new URL('@/assets/VolvoFMX.png', import.meta.url).href,
+      titulo1: 'Pronto para qualquer desafio',
+      subTitulo1:'O Volvo FMX foi projetado para transportar cargas pesadas e entregar mais produtividade, disponibilidade e economia para o seu negócio.Com maior capacidade de carga, conectividade avançada, força, precisão, conforto e robustez, o Volvo FMX apresenta soluções que fazem dele o caminhão certo para atuar em tarefas extremas e superar limites.',
+      image1: new URL('@/assets/FMX_capa.png', import.meta.url).href,
+      titulo2:
+        '<strong>Aplicações:</strong> Atividades de mineração, construção, operações florestais e setor canavieiro.<br/><strong>Potência:</strong> 380-540cv',
+      image2: new URL('@/assets/volvo-fmx1.png', import.meta.url).href,
+      titulo3:
+        'Construído para o trabalho pesado',
+      subTitulo2:
+        'Robusto, resistente e conectado, o Volvo FMX está sempre pronto para encarar os desafios mais extremos. E para manter sempre a maior produtividade, conte com o Plano de Manutenção Ouro, que associa a inteligência do caminhão com a conectividade avançada para garantir as manutenções preventivas e evitar paradas não planejadas. Agora, o plano que já era o mais completo do mercado ficou ainda melhor com a nova modalidade de pagamento Flex, que se adapta ao perfil e às variações do seu negócio através de custos baseados na quilometragem rodada.',
       video: new URL('@/assets/volvo-fmx.mp4', import.meta.url).href,
+      image3: new URL('@/assets/Volvo-fmx-sobre.png', import.meta.url).href,
+      titulo4: 'Direção Dinâmica Volvo',
+      subTitulo3:
+        'Estabilidade perfeita, controle total em baixas velocidades e menos esforço dos seus músculos. A Direção Dinâmica Volvo filtra a maioria dos chutes e solavancos do volante ao dirigir em superfícies irregulares. O sistema também ajuda a evitar derrapagens e saídas de pista acidentais, permite o ajuste das preferências de volante e oferece até mesmo controle remoto de direção.',
+      imagem4: new URL('@/assets/Volvo-fmx-sobre2.png', import.meta.url).href,
+      titulo5: 'Caixa I-Shift',
+      subTitulo4:
+        'Para cada missão, uma nova evolução da inteligência. Máxima economia de combustível. Temos agora novos modos de condução desenvolvidos para facilitar a condução dos motoristas conforme o objetivo que ele quer. Se o objetivo é economia, o modo de condução econômico, já ajusta todos os parâmetros do caminhão para trazer o máximo de economia. Para os demais Modos de condução, o ajuste também irá seguir a mesma lógica.',
+      imagem5: new URL('@/assets/Volvo-fmx-sobre3.png', import.meta.url).href,
     },
   ]
 
