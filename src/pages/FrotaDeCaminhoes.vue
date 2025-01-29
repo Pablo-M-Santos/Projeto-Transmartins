@@ -31,7 +31,7 @@
               style="padding: 30px 20px"
             >
               <v-img
-                src="@/assets/VolvoFH.png"
+                src="@/assets/FH/VolvoFH.png"
                 class="mb-2 imagem-card-sobre"
                 width="auto"
                 contain
@@ -73,7 +73,7 @@
               style="padding: 30px 20px"
             >
               <v-img
-                src="@/assets/VolvoFM.png"
+                src="@/assets/FM/VolvoFM.png"
                 class="mb-2 imagem-card-sobre"
                 width="auto"
                 contain
@@ -115,7 +115,7 @@
               style="padding: 30px 20px"
             >
               <v-img
-                src="@/assets/VolvoFMX.png"
+                src="@/assets/FMX/VolvoFMX.png"
                 class="mb-2 imagem-card-sobre"
                 width="auto"
                 contain
