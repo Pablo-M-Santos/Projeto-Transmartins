@@ -1,6 +1,6 @@
 <div align="center">
   
-  ![Badge](https://img.shields.io/badge/STATUS-EM%20PRODUÇÃO-blue?style=for-the-badge)
+  ![Badge](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-yellow?style=for-the-badge)
 
 </div>
 
